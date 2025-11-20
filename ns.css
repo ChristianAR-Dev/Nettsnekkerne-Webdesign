@@ -189,7 +189,7 @@ body {
     border-radius: 10px;
 }
 
-/* CONTACT */
+/* === CONTACT === */
 .contact-grid {
     display: flex;
     flex-wrap: wrap;
@@ -205,11 +205,18 @@ body {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     width: 300px;
+    max-width: 90%;
+    overflow-wrap: break-word; /* bryter lange ord som Gmail-adresse */
 }
 
 .contact-card .icon {
     font-size: 2rem;
     margin-bottom: 10px;
+}
+
+.contact-card p {
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .contact-btn:hover {
@@ -277,12 +284,12 @@ footer {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-    padding: 0 22px;            /* Bare side-padding */
+    padding: 0 22px;
     transition: max-height 0.35s ease;
 }
 
 .faq-answer p {
-    padding: 15px 0;           /* Fast padding på innhold */
+    padding: 15px 0;
 }
 
 .faq-icon {
@@ -310,8 +317,8 @@ footer {
 
     .nav-links.active {
         max-height: 300px;
-        border-bottom: 2px solid #000;     /* Svart strek */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Skygge */
+        border-bottom: 2px solid #000; /* svart strek */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* skygge */
     }
 
     .nav-links li {
@@ -350,6 +357,11 @@ footer {
         margin-bottom: 10px;
     }
 
+    .contact-card p {
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
     .contact-intro,
     .opening-hours {
         text-align: center;
@@ -361,3 +373,5 @@ footer {
     .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 0.95rem; }
 }
+
+
