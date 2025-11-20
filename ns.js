@@ -87,3 +87,4 @@ faqButtons.forEach(button => {
     });
 
 });
+
