@@ -206,7 +206,7 @@ body {
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     width: 300px;
     max-width: 90%;
-    overflow-wrap: break-word; /* bryter lange ord som Gmail-adresse */
+    overflow-wrap: break-word;
 }
 
 .contact-card .icon {
@@ -297,7 +297,7 @@ footer {
     transition: transform 0.3s ease;
 }
 
-/* === MOBILE === */
+/* === MOBILE (max-width: 768px) === */
 @media (max-width: 768px) {
 
     /* NAVBAR */
@@ -312,13 +312,14 @@ footer {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        box-shadow: none; 
+        box-shadow: none;
     }
 
+    /* Fixer Kontakt manglet i mobilmeny */
     .nav-links.active {
         max-height: 600px;
-        border-bottom: 2px solid #000; /* svart strek */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* skygge */
+        border-bottom: 2px solid #000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     }
 
     .nav-links li {
@@ -329,15 +330,32 @@ footer {
 
     .nav-toggle {
         display: flex;
-    } 
+    }
 
     /* HERO */
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1rem; }
 
-    /* ABOUT */
+    /* === OM OSS — sentrer tekst + bilde === */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-visual {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
     .about-icon {
         width: 90%;
+        margin: 0 auto;
     }
 
     /* CONTACT */
@@ -368,10 +386,12 @@ footer {
     }
 }
 
+/* === VERY SMALL DEVICES === */
 @media (max-width: 480px) {
     .hero { min-height: 60vh; }
     .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 0.95rem; }
 }
+
 
 
