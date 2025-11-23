@@ -315,7 +315,6 @@ footer {
         box-shadow: none;
     }
 
-    /* Fixer Kontakt manglet i mobilmeny */
     .nav-links.active {
         max-height: 600px;
         border-bottom: 2px solid #000;
@@ -336,7 +335,14 @@ footer {
     .hero-content h1 { font-size: 2rem; }
     .hero-content p { font-size: 1rem; }
 
-    /* === OM OSS — sentrer tekst + bilde === */
+    /* ⭐ STØRRE KONTAKT-KNAPP KUN PÅ MOBIL ⭐ */
+    .hero-btn {
+        padding: 18px 35px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+
+    /* OM OSS — sentrer på mobil */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -358,7 +364,7 @@ footer {
         margin: 0 auto;
     }
 
-    /* CONTACT */
+    /* CONTACT GRID */
     .contact-grid {
         flex-direction: column;
         align-items: center;
@@ -384,6 +390,15 @@ footer {
     .opening-hours {
         text-align: center;
     }
+
+    /* ⭐ SENTRER ÅPNINGSTIDER KUN PÅ MOBIL ⭐ */
+    .opening-hours {
+        width: 100%;
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+    }
 }
 
 /* === VERY SMALL DEVICES === */
@@ -392,6 +407,15 @@ footer {
     .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 0.95rem; }
 }
+
+
+/* === VERY SMALL DEVICES === */
+@media (max-width: 480px) {
+    .hero { min-height: 60vh; }
+    .hero-content h1 { font-size: 1.6rem; }
+    .hero-content p { font-size: 0.95rem; }
+}
+
 
 
 
