@@ -238,7 +238,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #007BFF;
-    color: #fff;
+    color: #2f6fed;
 }
 
 /* ANIMATIONS */
@@ -415,6 +415,7 @@ footer {
     .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 0.95rem; }
 }
+
 
 
 
