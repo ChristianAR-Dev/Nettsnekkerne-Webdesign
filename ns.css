@@ -401,12 +401,21 @@ footer {
     }
 }
 
+/* Fjern at knappen holder seg blå etter klikk */
+.hero-btn:focus,
+.hero-btn:active {
+    background-color: #222 !important;
+    outline: none;
+    box-shadow: none;
+}
+
 /* === VERY SMALL DEVICES === */
 @media (max-width: 480px) {
     .hero { min-height: 60vh; }
     .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 0.95rem; }
 }
+
 
 
 
