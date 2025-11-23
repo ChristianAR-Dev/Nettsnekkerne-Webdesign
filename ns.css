@@ -337,8 +337,8 @@ footer {
 
     /* ⭐ STØRRE KONTAKT-KNAPP KUN PÅ MOBIL ⭐ */
     .hero-btn {
-        padding: 18px 35px;
-        font-size: 1.2rem;
+        padding: 14px 30px;
+        font-size: 0.8rem;
         border-radius: 8px;
     }
 
@@ -409,12 +409,6 @@ footer {
 }
 
 
-/* === VERY SMALL DEVICES === */
-@media (max-width: 480px) {
-    .hero { min-height: 60vh; }
-    .hero-content h1 { font-size: 1.6rem; }
-    .hero-content p { font-size: 0.95rem; }
-}
 
 
 
