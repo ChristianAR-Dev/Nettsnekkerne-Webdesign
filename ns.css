@@ -23,6 +23,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar.shrink {
+    padding: 5px 20px;
+    background-color: #ffffffcc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .brand {
@@ -46,6 +53,11 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: bold;
+}
+
+.nav-link.active {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
 }
 
 .nav-link:hover {
@@ -72,15 +84,12 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Aktiv hamburger = X */
 .nav-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
-
 .nav-toggle.active span:nth-child(2) {
     opacity: 0;
 }
-
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -98,18 +107,21 @@ body {
     padding: 20px;
 }
 
-.hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+.hero-content h1, .hero-content p, .hero-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.hero-content.appear h1,
+.hero-content.appear p,
+.hero-content.appear .hero-btn {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-btn {
-    background-color: #222;
+    background: linear-gradient(90deg, #2f6fed, #007BFF);
     color: #fff;
     border: none;
     padding: 12px 25px;
@@ -120,8 +132,8 @@ body {
 }
 
 .hero-btn:hover {
-    background-color: #007BFF;
-    transform: scale(1.05);
+    transform: scale(1.08);
+    background: linear-gradient(90deg, #007BFF, #2f6fed);
 }
 
 /* === SECTIONS === */
@@ -163,11 +175,18 @@ body {
     flex: 1 1 250px;
     max-width: 90%;
     transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.card.appear {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 /* ABOUT */
@@ -207,30 +226,27 @@ body {
     width: 300px;
     max-width: 90%;
     overflow-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .contact-card .icon {
     font-size: 2rem;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
 
-.contact-card p {
-    word-wrap: break-word;
-    word-break: break-word;
-}
-
-.contact-btn:hover {
-    background-color: #0056b3;
+.contact-card .icon:hover {
+    transform: translateY(-5px);
 }
 
 .contact-intro,
 .opening-hours {
     text-align: center;
-}
-
-.opening-hours {
-    margin-top: 20px;
-    font-weight: bold;
 }
 
 /* FOOTER */
@@ -266,6 +282,10 @@ footer {
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+.faq.open .faq-icon {
+    transform: rotate(45deg);
+}
+
 .faq-question {
     width: 100%;
     padding: 18px 22px;
@@ -299,8 +319,6 @@ footer {
 
 /* === MOBILE (max-width: 768px) === */
 @media (max-width: 768px) {
-
-    /* NAVBAR */
     .nav-links {
         position: absolute;
         top: 60px;
@@ -331,93 +349,18 @@ footer {
         display: flex;
     }
 
-    /* HERO */
-    .hero-content h1 { font-size: 2rem; }
-    .hero-content p { font-size: 1rem; }
-
-    /* ⭐ STØRRE KONTAKT-KNAPP KUN PÅ MOBIL ⭐ */
-    .hero-btn {
-        padding: 17px 33px;
-        font-size: 1.1rem;
-        border-radius: 8px;
-    }
-
-    /* OM OSS — sentrer på mobil */
     .about-container {
         flex-direction: column;
-        text-align: center;
-        align-items: center;
     }
 
-    .about-text {
-        text-align: center;
+    .cards {
+        flex-direction: column;
     }
 
-    .about-visual {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .about-icon {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* CONTACT GRID */
     .contact-grid {
         flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .contact-card {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .contact-card .icon {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .contact-card p {
-        word-wrap: break-word;
-        word-break: break-word;
-    }
-
-    .contact-intro,
-    .opening-hours {
-        text-align: center;
-    }
-
-    /* ⭐ SENTRER ÅPNINGSTIDER KUN PÅ MOBIL ⭐ */
-    .opening-hours {
-        width: 100%;
-        margin-top: 20px;
-        font-weight: bold;
-        text-align: center;
-        display: block;
     }
 }
-
-/* Fjern at knappen holder seg blå etter klikk */
-.hero-btn:focus,
-.hero-btn:active {
-    background-color: #222 !important;
-    outline: none;
-    box-shadow: none;
-}
-
-/* === VERY SMALL DEVICES === */
-@media (max-width: 480px) {
-    .hero { min-height: 60vh; }
-    .hero-content h1 { font-size: 1.6rem; }
-    .hero-content p { font-size: 0.95rem; }
-}
-
-
-
 
 
 
