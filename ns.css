@@ -57,11 +57,9 @@ body { line-height:1.6; background:#f9f9f9; }
 }
 
 /* ABOUT */
-/* Make the "Om Nettsnekkerne" section centered and stack logo under the text on desktop,
-   and increase the logo size a bit. */
 .about-section { background:#f0f4f8; }
-.about-container { display:flex; flex-direction:column; flex-wrap:wrap; justify-content:center; align-items:center; gap:20px; text-align:center; }
-.about-icon { width:380px; max-width:90%; border:3px solid #007BFF; border-radius:10px; }
+.about-container { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; }
+.about-icon { width:300px; border:3px solid #007BFF; border-radius:10px; }
 
 /* CONTACT */
 .contact-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:30px; }
@@ -90,9 +88,8 @@ footer { text-align:center; padding:20px; background:#2f6fed; color:#fff; }
 .nav-links.active{ max-height:600px; border-bottom:2px solid #000; box-shadow:0 4px 10px rgba(0,0,0,0.25);}
 .nav-links li{ width:100%; text-align:center; padding:15px 0;}
 .nav-toggle{ display:flex;}
-/* Increased hero text size on tablet/large-phone */
-.hero-content h1{ font-size:2.4rem;}
-.hero-content p{ font-size:1.25rem;}
+.hero-content h1{ font-size:2rem;}
+.hero-content p{ font-size:1rem;}
 .hero-btn{ padding:17px 33px; font-size:1.1rem; border-radius:8px;}
 .about-container{ flex-direction:column; text-align:center; align-items:center;}
 .about-icon{ width:90%; margin:0 auto;}
@@ -102,8 +99,6 @@ footer { text-align:center; padding:20px; background:#2f6fed; color:#fff; }
 }
 @media(max-width:480px){
 .hero{ min-height:60vh;}
-/* Increased hero text size on small phones */
-.hero-content h1{ font-size:2.2rem;}
-.hero-content p{ font-size:1.2rem;}
-.hero-btn{ padding:17px 33px; font-size:1.1rem; border-radius:8px;}
+.hero-content h1{ font-size:1.6rem;}
+.hero-content p{ font-size:0.95rem;}
 }
